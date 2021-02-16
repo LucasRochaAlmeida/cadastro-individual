@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <form action="" method="POST">
+
+        <fieldset>
+
+            <label for="solicitacao">Solicitação para:</label>
+            <select name="solicitacao" id="solicitacao">
+                <option value="TI">Departamento de T.I.</option>
+                <option value="MANUTENCAO">Departamento de manutenção</option>
+            </select>
+
+            <label for="identificacao">Identificação</label>
+            <input type="text" name="identificacao" required>
+
+            <label for="assunto">Assunto:</label>
+            <input type="text" name="assunto" required>
+
+            <label for="detalhes">Detalhes:</label>
+            <input type="text" name="detalhes" required>
+
+            <label for="localizacao">Localização</label>
+            <select name="localizacao" id="localizacao">
+                <option value="UBS PORTAO VERMELHO">UBS Portão Vermelho</option>
+                <option value="UBS BELA VISTA">UBS Bela Vista</option>
+            </select>
+
+            <label for="lugar">Lugar específico</label>
+            <select name="lugar" id="">
+                <option value="SALA DE VACINA">Sala de vacina</option>
+                <option value="SAME">Same</option>
+            </select>
+
+
+        </fieldset>
+
+        <button type="submit">Enviar</button>
+
+        <button type="reset">Cancelar</button>
+
+    </form>
+
+</body>
+</html>
