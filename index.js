@@ -21,10 +21,17 @@ conexao.connect(erro => {
     } else{
 
         server.get('/', (req, res)=> {
-            return res.sendFile(path.join(__dirname, 'public', 'ti.html'))
+            return res.sendFile(path.join(__dirname, 'public', 'pagInicial.html'))
         })
         
-        server.post('/', (req, res) => {
+        server.post('/ti.html', (req, res) => {
+            //console.log(req.body)
+            const atendimento = req.body
+            Atendimento.adiciona(atendimento)
+            res.sendFile(path.join(__dirname, 'public', 'fimCadastro.html'))
+        } )
+
+        server.post('/manutencao.html', (req, res) => {
             //console.log(req.body)
             const atendimento = req.body
             Atendimento.adiciona(atendimento)
