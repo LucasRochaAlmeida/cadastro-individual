@@ -24,7 +24,7 @@ conexao.connect(erro => {
             return res.sendFile(path.join(__dirname, 'public', 'pagInicial.html'))
         })
         
-        server.post('/ti.html', (req, res) => {
+        server.post('/cadastroInd.html', (req, res) => {
             //console.log(req.body)
             const atendimento = req.body
             Atendimento.adiciona(atendimento)
