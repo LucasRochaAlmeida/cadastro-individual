@@ -1,11 +1,11 @@
 body{
-    background-color: rgb(90, 103, 129);
+    background-image: linear-gradient(to top left,rgb(55, 55, 68),black) ;
 }
 
 form{
     background-color: rgb(199, 191, 191);
     font-family: 'Montserrat', sans-serif;
-    width: 95%; 
+    width: 70%; 
     margin-left: auto; 
     margin-right: auto;
     padding-top: 7px;
@@ -34,6 +34,10 @@ legend{
 
 .campoMaior{
     margin: 20px 10px;
+}
+
+input, select{
+    margin-bottom: 10px;
 }
 
 button{
