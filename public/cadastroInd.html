@@ -19,15 +19,15 @@
             <fieldset class="campoMenor">
 
                 <label for="cpfDoCidadao">CPF do cidadão:</label>
-                <input name="cpfDoCidadao" id="cpfDoCidadao" oninput="mascara(this)">
+                <input name="cpfDoCidadao" id="cpfDoCidadao" oninput="mascara(this)" required>
 
                 <legend>Identificação do usuário/cidadão</legend>
 
                 <label for="nomeCompleto">Nome completo:</label>
-                <input type="text" name="nomeCompleto" id="nomeCompleto">
+                <input type="text" name="nomeCompleto" id="nomeCompleto" required>
 
                 <label for="dataDeNascimento">Data de nascimento:</label>
-                <input type="date" name="dataDeNascimento" id="dataDeNascimento">
+                <input type="date" name="dataDeNascimento" id="dataDeNascimento" required>
 
                 <label for="sexo">Sexo:</label>
                 <select name="sexo" id="sexo">
@@ -47,17 +47,25 @@
                 <label for="etnia">Etnia:</label>
                 <input type="text" name="etnia" id="etnia">
 
+                <br />
+
                 <label for="telefone">Telefone:</label>
-                <input name="telefone" id="telefone">
+                <input name="telefone" id="telefone" required>
 
                 <label for="email">E-MAIL:</label>
-                <input name="eamil" id="email">
+                <input name="email" id="email">
+
+                <br />
 
                 <label for="nomeCompletoMae">Nome completo da mãe (se for desconhecido deixar em branco):</label>
-                <input type="text" name="nomeCompletoMae" id="nomeCompletoMae">
+                <input type="text" name="nomeCompletoMae" id="nomeCompletoMae" style="padding-right: 100px;">
+
+                <br />
 
                 <label for="nomeCompletoPai">Nome completo do pai (se for desconhecido deixar em branco):</label>
-                <input type="text" name="nomeCompletoPai" id="nomeCompletoPai">
+                <input type="text" name="nomeCompletoPai" id="nomeCompletoPai" style="padding-right: 100px;">
+
+                <br />
 
                 <label for="nacionalidade">Nacionalidade</label>
                 <select name="nacionalidade" id="nacionalidade">
@@ -71,7 +79,7 @@
 
 
                 <label for="possuiDeficiencia">Tem alguma deficiência?:</label>
-                <select name="possuiDeficiencia" id="possuiDeficiencia">
+                <select name="possuiDeficiencia" id="possuiDeficiencia" required>
                     <option value=""></option>
                     <option value="NAO">NÃO</option>
                     <option value="SIM">SIM</option>
@@ -121,8 +129,9 @@
                 <option value=""></option>
             </select>
 
-            <label for="tipoLugradouro">Tipos de logradouro</label>
-            <select name="tipoLugradouro" id="tipoLugradouro">
+            <label for="tipoLugradouro">Tipos de logradoro</label>
+            <select name="tipoLugradouro" id="tipoLugradouro" required>
+                <option value=""></option>
                 <option value="ALAMEDA">ALAMEDA</option>
                 <option value="AVENIDA">AVENIDA</option>
                 <option value="CAMPO">CAMPO</option>
@@ -143,17 +152,22 @@
                 <option value="VILA">VILA</option>
             </select>
 
-            <label for="nomeLugradouro">Nome do lugradouro:</label>
-            <input type="text" name="nomeLugradouro" id="nomeLugradouro">
+            <br />
+
+            <label for="nomeLugradouro">Nome do lugradoro:</label>
+            <input type="text" name="nomeLugradouro" id="nomeLugradouro" required>
 
             <label for="numeroCasa">Número:</label>
-            <input type="text" name="numeroCasa" id="numeroCasa">
+            <input type="text" name="numeroCasa" id="numeroCasa" required>
 
             <label for="complemento">Complemento:</label>
             <input type="text" name="complemento" id="complemento">
 
+            <br />
+
             <label for="situacaoMoradia">Situação de moradia/Posse de terra:</label>
-            <select name="situacaoMoradia" id="situacaoMoradia">
+            <select name="situacaoMoradia" id="situacaoMoradia" required>
+                <option value=""></option>
                 <option value="PROPRIO">PRÓPRIO</option>
                 <option value="FINANCIADO">FINANCIADO</option>
                 <option value="ALUGADO">ALUGADO</option>
@@ -174,18 +188,24 @@
 
 
         <fieldset  class="campoMenor"> <!-- área do responsável -->
-            <legend>Área do responsável</legend>
-                <label for="responsavel">Cidadão é responsável familiar?</label>
-            <select name="responsavel" id="responsavel">
-                <option value="NAO">Não, não sou o responsável da família</option>
-                <option value="SIM">Sim, sou o responsável da família</option>
-            </select>
+            <legend>Área do responsável (Caso você seja o responsável familiar, preencha com seus dados)</legend>
 
-            <label for="cpfResponsavel">CPF do responsável familiar:</label>
-            <input name="cpfResponsavel" id="cpfResponsavel">
+            <label for="homemResponsavel">Nome do homem responsável familiar:</label>
+            <input type="text" name="homemResponsavel" id="homemResponsavel">
+            <label for="cpfHomemResponsavel">CPF:</label>
+            <input type="text" name="cpfHomemResponsavel" id="cpfHomemResponsavel" oninput="mascara(this)">
+            <label for="telHomemResponsavel">Telefone:</label>
+            <input type="text" name="telHomemResponsavel" id="telHomemResponsavel">
 
-            <label for="microarea">Microárea:</label>
-            <input type="text" name="microarea" id="microarea">
+            <br />
+            
+            <label for="mulherResponsavel">Nome da mulher responsável familiar:</label>
+            <input type="text" name="mulherResponsavel" id="mulherResponsavel">
+            <label for="cpfMulherResponsavel">CPF:</label>
+            <input type="text" name="cpfMulherResponsavel" id="cpfMulherResponsavel" oninput="mascara(this)">
+            <label for="telMulherResponsavel">Telefone:</label>
+            <input type="text" name="telMulherResponsavel" id="telMulherResponsavel">
+
         </fieldset>
 
 
@@ -197,6 +217,8 @@
 
                 <label for="portariaDeNaturalização">Portaria de Naturalização</label>
                 <input type="text" name="portariaDeNaturalização" id="portariaDeNaturalização">
+
+                <br />
 
                 <label for="municipioDeNaturalização">Município e UF de nascimento:</label>
                 <input type="text" name="municipioDeNaturalização" id="municipioDeNaturalização">
@@ -238,7 +260,8 @@
             <fieldset class="campoMenor">
                 <legend>Escolaridade e trabalho</legend>
                 <label for="nivelEscolaridade">Qual é o curso mais elevado que frequenta ou frequentou?</label>
-                <select name="nivelEscolaridade" id="nivelEscolaridade">
+                <select name="nivelEscolaridade" id="nivelEscolaridade" required>
+                    <option value=""></option>
                     <option value="NENHUM">NENHUM</option>
                     <option value="CRECHE">CRECHE</option>
                     <option value="PRE-ESCOLA(EXCETO CA)">PRÉ-ESCOLA(Exceto ca)</option>
@@ -256,6 +279,8 @@
                     <option value="ALFABETIZACAO PARA ADULTOS (Mobral etc.)">ALFABETIZAÇÃO PARA ADULTOS (Mobral etc.)</option>
                 </select>
 
+                <br  />
+
                 <label for="trabalhaOuNao">Situação no mercado de trabalho:</label>
                 <select name="trabalhaOuNao" id="trabalhaOuNao">
                     <option value="EMPREGADOR">EMPREGADOR</option>
@@ -271,22 +296,6 @@
 
             </fieldset>
 
-
-
-            <fieldset class="campoMenor">
-                <legend>Criança</legend>
-                <label for="criancasComQuemFica">Crianças de 0 a 9 anos, com quem fica?</label>
-                <select name="criancasComQuemFica" id="criancasComQuemFica">
-                    <option value=""></option>
-                    <option value="ADULTO RESPONSAVEL">ADULTO RESPONSÁVEL</option>
-                    <option value="OUTRA(S) CRIANÇA(S)">OUTRA(S) CRIANÇA(S)</option>
-                    <option value="ADOLESCENTE">ADOLESCENTE</option>
-                    <option value="SOZINHA">SOZINHA</option>
-                    <option value="CRECHE">CRECHE</option>
-                    <option value="OUTRO">OUTRO</option>
-                </select>
-            </fieldset>
-
         </fieldset>
 
 
@@ -297,12 +306,13 @@
             <fieldset class="campoMenor">
                 <legend>Gestante</legend>
                 <label for="gestante">Está gestante</label>
-                <select name="gestante" id="gestante">
+                <select name="gestante" id="gestante" required>
+                    <option value=""></option>
                     <option value="NAO">NÃO</option>
                     <option value="SIM">SIM</option>
                 </select>
-                <label for="maternidadeReferencia">Se sim, qual a maternidade de referência?</label>
-                <input type="text" name="maternidadeReferencia" id="maternidadeReferencia">
+                <label for="ultimaMenstruacao">Data da última menstruação (caso esteja grávida):</label>
+                <input type="date" name="ultimaMenstruacao" id="ultimaMenstruacao">
             </fieldset>
 
 
@@ -317,11 +327,15 @@
                     <option value="ACIMA DO PESO">ACIMA DO PESO</option>
                 </select>
 
-                <label for="fumante">Está fumante?</label>
+                <br />
+
+                <label for="fumante">É fumante?</label>
                 <select name="fumante" id="fumante">
                     <option value="NAO">NÃO</option>
                     <option value="SIM">SIM</option>
                 </select>
+
+                <br />
 
                 <label for="alcool">Faz uso de álcool</label>
                 <select name="alcool" id="alcool">
@@ -329,11 +343,15 @@
                     <option value="SIM">SIM</option>
                 </select>
 
+                <br />
+
                 <label for="drogas">Faz uso de outras drogas?</label>
                 <select name="drogas" id="drogas">
                     <option value="NAO">NÃO</option>
                     <option value="SIM">SIM</option>
                 </select>
+
+                <br />
 
                 <label for="hipertensao">Tem hipertensão arterial?</label>
                 <select name="hipertensao" id="hipertensao">
@@ -341,11 +359,15 @@
                     <option value="SIM">SIM</option>
                 </select>
 
+                <br />
+
                 <label for="diabetes">Tem diabetes?</label>
                 <select name="diabetes" id="diabetes">
                     <option value="NAO">NÃO</option>
                     <option value="SIM">SIM</option>
                 </select>
+
+                <br />
 
                 <label for="avcDerrame">Teve AVC/Derrame?</label>
                 <select name="avcDerrame" id="avcDerrame">
@@ -353,11 +375,15 @@
                     <option value="SIM">SIM</option>
                 </select>
 
+                <br />
+
                 <label for="infarto">Teve infarto?</label>
                 <select name="infarto" id="infarto">
                     <option value="NAO">NÃO</option>
                     <option value="SIM">SIM</option>
                 </select>
+
+                <br />
 
                 <label for="doencaCardiaca">Tem doença cardíaca/do coração?</label>
                 <select name="doencaCardiaca" id="doencaCardiaca">
@@ -372,6 +398,8 @@
                     <option value="NAO SABE">NÃO SABE</option>
                 </select>
 
+                <br />
+
                 <label for="problemaRins">Tem ou teve problemas nos rins?</label>
                 <select name="problemaRins" id="problemaRins">
                     <option value="NAO">NÃO</option>
@@ -384,6 +412,8 @@
                     <option value="OUTRA">OUTRA</option>
                     <option value="NAO SABE">NÃO SABE</option>
                 </select>
+
+                <br />
 
                 <label for="doencaRespiratoria">Tem doença respiratória/no pulmão? </label>
                 <select name="doencaRespiratoria" id="doencaRespiratoria">
@@ -398,6 +428,8 @@
                     <option value="OUTRA">OUTRA</option>
                     <option value="NAO SABE">NÃO SABE</option>
                 </select>
+
+                <br />
                 
                 <label for="hanseniase">Está com hanseníase?</label>
                 <select name="hanseniase" id="hanseniase">
@@ -405,17 +437,23 @@
                     <option value="SIM">SIM</option>
                 </select>
 
+                <br />
+
                 <label for="tuberculose">Está com tuberculose?</label>
                 <select name="tuberculose" id="tuberculose">
                     <option value="NAO">NÃO</option>
                     <option value="SIM">SIM</option>
                 </select>
 
+                <br />
+
                 <label for="cancer">Tem ou teve câncer?</label>
                 <select name="cancer" id="cancer">
                     <option value="NAO">NÃO</option>
                     <option value="SIM">SIM</option>
                 </select>
+
+                <br />
 
                 <label for="internacaoRecente">Teve alguma internação nos últimos 12 meses?</label>
                 <select name="internacaoRecente" id="internacaoRecente">
@@ -425,11 +463,15 @@
                 <label for="internacaoRecente2">Se sim, por qual causa?</label>
                 <input type="text" name="internacaoRecente2" id="internacaoRecente2">
 
+                <br />
+
                 <label for="diagnostico">Teve diagnóstico de algum problema de saúde mental por profissional de saúde?</label>
                 <select name="diagnostico" id="diagnostico">
                     <option value="NAO">NÃO</option>
                     <option value="SIM">SIM</option>
                 </select>
+
+                <br />
 
                 <label for="acamado">Está acamado?</label>
                 <select name="acamado" id="acamado">
@@ -437,11 +479,15 @@
                     <option value="SIM">SIM</option>
                 </select>
 
+                <br />
+
                 <label for="domiciliado">Está domiciliado?</label>
                 <select name="domiciliado" id="domiciliado">
                     <option value="NAO">NÃO</option>
                     <option value="SIM">SIM</option>
                 </select>
+
+                <br />
 
                 <label for="usoDePlantas">Usa plantas medicinais?</label>
                 <select name="usoDePlantas" id="usoDePlantas">
@@ -451,11 +497,15 @@
                 <label for="usoDePlantas2">Se sim, indique qual(is)?</label>
                 <input type="text" name="usoDePlantas2" id="usoDePlantas2">
 
+                <br />
+
                 <label for="praticasIntegrativas">Usa outras práticas integrativas e complementares?</label>
                 <select name="praticasIntegrativas" id="praticasIntegrativas">
                     <option value="NAO">NÃO</option>
                     <option value="SIM">SIM</option>
                 </select>
+
+                <br />
 
                 <label for="outrasCondicoes">Outras condições de saúde? Qual?</label>
                 <input type="text" name="outrasCondicoes" id="outrasCondicoes">
@@ -464,7 +514,7 @@
 
 
 
-            <fieldset class="campoMenor">
+            <!-- <fieldset class="campoMenor">
                 <legend>Cidadão em situação de rua</legend>
 
                 <label for="emSituacaoDeRua">Está em situação de rua?</label>
@@ -543,7 +593,7 @@
                 </select>
 
 
-            </fieldset>
+            </fieldset> -->
 
 
             
