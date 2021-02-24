@@ -9,8 +9,7 @@ class Tabelas{
 
     criarAtendimentos(){
         const sql = `CREATE TABLE IF NOT EXISTS atendimentos 
-            (id int NOT NULL AUTO_INCREMENT,
-            cpfDoCidadao text,
+            (cpfDoCidadao varchar(15),
             nomeCompleto text, 
             dataDeNascimento text, 
             sexo text, 
@@ -77,7 +76,7 @@ class Tabelas{
             praticasIntegrativas text,
             outrasCondicoes text,
             confirmacaoDosDados text,
-            PRIMARY KEY (id) )`
+            PRIMARY KEY (cpfDoCidadao) )`
         
 
         this.conexao.query( sql, erro => {
