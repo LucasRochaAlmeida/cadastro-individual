@@ -40,7 +40,7 @@ conexao.connect(erro => {
 
         Tabelas.init(conexao)
         
-        server.listen(5001)
+        server.listen(3001)
     }
 
 })
